@@ -1,0 +1,19 @@
+{
+  "name": "seguri-bookmarkleter",
+  "version": "1.0.0",
+  "description": "Create bookmarklets in your browser with a simple copy and paste.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seguri/bookmarkleter.git"
+  },
+  "author": "Marco Seguri",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/seguri/bookmarkleter/issues"
+  },
+  "homepage": "https://seguri.github.io/bookmarkleter/"
+}
