@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/seguri/bookmarkleter/issues"
   },
-  "homepage": "https://seguri.github.io/bookmarkleter/"
+  "homepage": "https://seguri.github.io/bookmarkleter/",
+  "dependencies": {
+    "uglify-js": "^3.15.4"
+  }
 }
