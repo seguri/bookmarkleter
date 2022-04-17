@@ -24,7 +24,7 @@
         <label class="form-label mt-3">Options:</label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="iife" />
-          <label class="form-check-label" for="iife"> Wrap with IIFE </label>
+          <label class="form-check-label" for="iife"> Wrap with IIFE</label>
         </div>
         <div class="form-check">
           <input
@@ -32,6 +32,7 @@
             type="checkbox"
             value=""
             id="jquery"
+            checked
           />
           <label class="form-check-label" for="jquery">
             Ensure jQuery 3.6 is available
@@ -43,6 +44,7 @@
             type="checkbox"
             value=""
             id="minify"
+            checked
           />
           <label class="form-check-label" for="minify">
             Minify with UglifyJS
@@ -63,7 +65,8 @@
         <div class="mt-3">
           <label for="code" class="form-label">Input code:</label>
           <textarea name="code" id="code" class="form-control" rows="8">
-function add(first, second) { return first + second; }</textarea
+const inputs = $('input');
+console.log(inputs.length);</textarea
           >
         </div>
         <div class="mt-3 mb-3">
