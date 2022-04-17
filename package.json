@@ -4,6 +4,7 @@
   "description": "Create bookmarklets in your browser with a simple copy and paste.",
   "main": "index.js",
   "scripts": {
+    "prebuild": "test -f uglify.js || uglifyjs --self --wrap exports -c -m -o uglify.js",
     "lint": "prettier --write '**/*.{js,css,html}'",
     "test": "mocha"
   },

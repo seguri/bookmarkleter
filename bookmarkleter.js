@@ -1,4 +1,4 @@
-const UglifyJS = require('uglify-js');
+const minify = require('./uglify').minify;
 
 const jQueryWrap = code => `void function() {
   function onload($) {${code}};
@@ -22,7 +22,7 @@ module.exports = exports = (code, options = {}) => {
   }
 
   if (options.minify) {
-    result = UglifyJS.minify(result).code;
+    result = minify(result).code;
   }
 
   return `javascript:${result}`;
