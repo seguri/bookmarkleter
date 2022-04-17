@@ -1,3 +1,5 @@
+const bookmarkleter = require('./bookmarkleter');
+
 const iife = document.getElementById('iife');
 const jquery = document.getElementById('jquery');
 const minify = document.getElementById('minify');
@@ -11,11 +13,19 @@ onBookmarkletNameChange = event => {
 };
 
 onCodeChange = event => {
-  const minified = UglifyJS.minify(code.value).code;
-  outputText.innerHTML = minified;
-  link.href = `javascript:void function(){${minified}}()`;
+  const options = {
+    iife: iife.checked,
+    jquery: jquery.checked,
+    minify: minify.checked,
+  };
+  const result = bookmarkleter(code.value, options);
+  outputText.innerHTML = result;
+  link.href = result;
 };
 
+iife.addEventListener('change', onCodeChange);
+jquery.addEventListener('change', onCodeChange);
+minify.addEventListener('change', onCodeChange);
 bookmarkletName.addEventListener('change', onBookmarkletNameChange);
 code.addEventListener('change', onCodeChange);
 
