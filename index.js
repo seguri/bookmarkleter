@@ -13,6 +13,10 @@ onBookmarkletNameChange = event => {
 };
 
 onCodeChange = event => {
+  // Improve UX of iife
+  iife.disabled = jquery.checked;
+  if (jquery.checked) iife.checked = true;
+
   const options = {
     iife: iife.checked,
     jquery: jquery.checked,
