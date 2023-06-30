@@ -20,6 +20,10 @@
     <div class="container mt-3">
       <h1>Bookmarkleter</h1>
       <h2>You have JavaScript. You need a bookmarklet. This does that.</h2>
+      <p>
+        Drag this link to your bookmarks bar:
+        <a href="javascript:void function(){}();" id="link">My Bookmarklet</a>
+      </p>
       <form onsubmit="return false;">
         <label class="form-label mt-3">Options:</label>
         <div class="form-check">
@@ -80,10 +84,6 @@ console.log(inputs.length);</textarea
           ></textarea>
         </div>
       </form>
-      <p>
-        Drag this link to your bookmarks bar:
-        <a href="javascript:void function(){}();" id="link">My Bookmarklet</a>
-      </p>
     </div>
     <a
       class="github-fork-ribbon"
